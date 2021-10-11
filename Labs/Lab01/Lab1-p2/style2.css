@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.logo-title {
+    border: solid;
+    border-radius: 25px;
+    color: red;
+    border-width: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.txt-title-1 {
+    color: #aa3c41;
+    text-shadow: 5px 5px #0000ff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.txt-deco-1 {
+    text-decoration: underline;
+    font-size: 120%;
+}
+.txt-title-2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #aa3c41;
+}
+.link-deco-1:link {
+    color: red;
+}
+.link-deco-1:visited {
+    color: red;
+}
+.link-deco-1:active {
+    color: aquamarine;
+}
+.link-deco-1:hover {
+    color: cadetblue;
+}
+
+.link-deco-2:link {
+    color: blue;
+}
+.link-deco-2:visited {
+    color: blue;
+}
+.link-deco-2:active {
+    color: aquamarine;
+}
+.link-deco-2:hover {
+    color: cadetblue;
+}
+.link-deco-3 {
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+}
+.link-deco-3:link {
+    color: cadetblue;
+}
+.link-deco-3:visited {
+    color: cadetblue;
+}
+.link-deco-3:active {
+    color: coral;
+}
+.link-deco-3:hover {
+    color: tomato;
+}
+table,
+td,
+th {
+    border: 1px solid gray;
+}
+td,
+th {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+table {
+    border-collapse: collapse;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            h1 {
+                color: black;
+                font-family: "Times New Roman", Times, serif;
+            }
+            p {
+                color: black;
+                font-family: "Times New Roman", Times, serif;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                color: black;
+                font-family: "Times New Roman", Times, serif;
+            }
+            ul,
+            li {
+                font-family: "Times New Roman", Times, serif;
+                color: black;
+            }
+            label,
+            fieldset,
+            input,
+            textarea {
+                font-family: "Times New Roman", Times, serif;
+                color: black;
+            }
+        </style>
+        <meta charset="UTF-8" />
+        <title>Bai 1 - 1710165 - Huynh Pham Phuoc Linh</title>
+    </head>
+    <body style="background-color: white">
+        <img src="./images01/logo.png" alt="logo" />
+        <div>
+            <h1>About</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <div>
+            <h1>Intro</h1>
+            <video controls>
+                <source
+                    src="http://techslides.com/demos/sample-videos/small.mp4"
+                    type="video/mp4"
+                />
+                Video Mp4.
+            </video>
+        </div>
+        <div>
+            <h1>Our Locations</h1>
+            <div>
+                <ul>
+                    <li>
+                        <label>USA</label>
+                        <ul>
+                            <li>
+                                <a href="https://www.meetup.com/girldevelopit/"
+                                    >New York</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="http://www.meetup.com/girldevelopitcbus"
+                                    >Columbus</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="http://www.meetup.com/Girl-Develop-It-Austin"
+                                    >Austin</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="http://www.meetup.com/Girl-Develop-It-Philadelphia/"
+                                    >Philly</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label>World</label>
+                        <ul>
+                            <li>
+                                <a
+                                    href="http://www.meetup.com/Girl-Develop-It-Ottawa"
+                                    >Ottawa</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.meetup.com/girldevelopit-sydney/"
+                                    >Sydney</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h1>Upcoming Classes</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Topic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>New York</td>
+                        <td>JavaScript & jQuery</td>
+                    </tr>
+                    <tr>
+                        <td>San Francisco</td>
+                        <td>HTML & CSS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h1>Sign Up!</h1>
+            <form>
+                <div>
+                    <label>Name:</label>
+                    <input type="text" id="name" name="Name" /><br />
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="text" id="email" name="Email" /><br />
+                </div>
+                <div>
+                    <label>Location:</label>
+                    <select id="location" name="Location">
+                        <option>San Francisco</option>
+                        <option>New York</option>
+                    </select>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Gender:</legend>
+                        <label>Female</label>
+                        <input type="radio" id="female" name="gender" />
+                        <label>Male</label>
+                        <input type="radio" id="male" name="gender" /><br />
+                    </fieldset>
+                    <br />
+                </div>
+                <div>
+                    <label>Experience:</label><br />
+                    <textarea id="experience" name="Experience"></textarea>
+                </div>
+                <input type="submit" value="Sign Up" />
+            </form>
+        </div>
+        <div>
+            <br /><br />
+            <footer>
+                <a href="https://twitter.com/girldevelopit">Twitter</a>
+                <label>|</label>
+                <a href="https://www.facebook.com/girldevelopit">Facebook</a>
+                <label>|</label>
+                <a
+                    href="https://www.flickr.com/photos/40453677@N00/sets/72157626841092971/"
+                    >Flickr</a
+                >
+            </footer>
+        </div>
+    </body>
+</html>
