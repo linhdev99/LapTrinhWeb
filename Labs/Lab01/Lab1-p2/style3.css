@@ -19,6 +19,7 @@ body {
   height: 50px;
   margin: auto;
   padding-left: 10px;
+  padding-top: 5px;
 }
 .option-deco {
   background-color: #cc9999;
