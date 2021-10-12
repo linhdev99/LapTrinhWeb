@@ -1,7 +1,95 @@
 * {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 0;
-    margin: 0;
-    user-select: none;
-    box-sizing: border-box;
+  font-family: "Trebuchet MS";
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+body {
+  width: 800px;
+  margin: auto;
+  font-size: 18px;
+}
+.header-deco {
+  background-color: gray;
+  height: 50px;
+  padding-left: 10px;
+}
+.option-menu {
+  background-color: blue;
+  height: 50px;
+  justify-content: left center;
+  display: flex;
+  padding-left: 40px;
+}
+.tr-1,
+.td-1 {
+  padding-right: 20px;
+}
+.link-ref-1:link {
+  color: white;
+}
+.link-ref-1:visited {
+  color: white;
+}
+.link-ref-1:hover {
+  color: burlywood;
+}
+.link-ref-1:active {
+  color: blueviolet;
+}
+.body-deco {
+  padding: 0;
+  margin: 0;
+}
+.fragment {
+  float: left;
+}
+.clear-fragment {
+  clear: both;
+}
+.menu-deco {
+  width: 250px;
+}
+.content-deco {
+  width: 550px;
+}
+.menu-box {
+  height: 150px;
+  padding: 0px 40px;
+}
+.menu-yellow {
+  background-color: yellow;
+}
+.menu-gray {
+  background-color: gray;
+}
+.para-1 {
+  padding: 25px 10px;
+}
+.footer-content {
+  height: 128px;
+}
+.footer-box {
+  float: left;
+  padding: 20px 10px;
+}
+.footer-green {
+  background-color: green;
+  width: 50%;
+  height: 100%;
+}
+.footer-red {
+  background-color: red;
+  width: 50%;
+  height: 100%;
+}
+.clear-footer {
+  clear: both;
+}
+.footer-deco {
+  background-color: blue;
+  color: black;
+  font-size: 2em;
+  text-align: center;
 }
