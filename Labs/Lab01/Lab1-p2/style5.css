@@ -30,7 +30,7 @@ body {
 }
 .banner h1 {
   font-style: italic;
-  color: aliceblue;
+  color: gray;
   font-weight: unset;
   padding-left: 40px;
   padding-top: 50px;
@@ -41,26 +41,31 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: flex;
-  align-items: left center;
+  align-items: center;
+  line-height: 35px;
 }
 .menu-option ul {
   margin: unset;
-  padding: 5px 0 5px 20px;
+  padding: 0px 0px 0px 20px;
 }
 .menu-option li {
+  float: left;
   display: inline;
   margin: 0 20px 0 0;
-  text-decoration: none;
+  list-style-type: none;
 }
 .menu-option li:hover {
   background-image: url("images03/bg-menu-hover.png");
   background-size: 100% 100%;
+  height: 35px;
 }
 .menu-option a {
   color: white;
-  text-decoration-line: unset;
+  text-decoration: none;
   font-size: 15px;
+  line-height: 35px;
 }
+
 .content {
   font-size: 15px;
   display: flex;
@@ -170,7 +175,6 @@ footer {
   height: 25px;
   background-position: center -26px, top;
 }
-
 
 .list-bottom {
   background-image: url("images03/bg-sidebar-bottom.gif");
