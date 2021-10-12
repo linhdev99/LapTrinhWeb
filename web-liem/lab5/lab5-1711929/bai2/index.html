@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>bai2 -lab5</title>
+  <meta charset="UTF-8">
+  <style>
+    
+label{
+  font-size: 20px;
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+    <div> 
+
+      <h1>Xử lý Form bằng Javascript</h1>
+      <p>Điền vào form dưới đây</p>
+    <form id="myForm">
+      <label for="fname">Fisrt name</label><br>
+      <input type="text" id="fname"  placeholder="Ngo Thanh" required><br>
+      <label for="lname">Last name</label><br>
+      <input type="text" id="lname" placeholder="Liem" required><br>
+      <label for="mail">Email</label><br>
+      <input type="email" id="mail" placeholder="liemNT@example.com" required><br>
+      <label for="password">Password</label><br>
+      <input type="password" name="password" placeholder="**********" id="password" required><br> 
+      <label>Birthday</label><br>
+      <select id="date"></select>
+      <select id="month"></select>
+      <select id="year"></select><br>
+      <label>Gender</label><br>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">nam</label><br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">nữ</label><br>
+          <input type="radio" id="other" name="gender" value="other" checked>
+          <label for="other">không xác định </label><br>
+      <label>Country</label><br>
+      <select name="Country" id="Country">
+        <option value="VN">Vietnam</option>
+        <option value="AU">Australia</option>
+        <option value="US">United States</option>
+        <option value="ID">India</option>
+        <option value="other">Other</option>
+      </select><br>
+      <label>About</label><br>
+      <textarea name="about" id="about" cols="30" rows="10" maxlength="10000"></textarea><br>
+    </form>
+    <button onclick="submit()">Submit</button>
+    <button onclick="reset()">Reset</button>
+  </div>
+    
+    <script>
+      var start_date = 1;
+      var end_date = 31;
+      var options = "";
+      for(var date = start_date ; date <=end_date; date++){
+        options += "<option>"+ date +"</option>";
+      }
+      document.getElementById("date").innerHTML = options;
+      var start_month = 1;
+      var end_month = 12;
+      var options = "";
+      for(var month = start_month ; month <=end_month; month++){
+        options += "<option>"+ month +"</option>";
+      }
+      document.getElementById("month").innerHTML = options;
+      var start_year = 1900;
+      var end_year = new Date().getFullYear();
+      var options = "";
+      for(var year = start_year ; year <=end_year; year++){
+        options += "<option>"+ year +"</option>";
+      }
+      document.getElementById("year").innerHTML = options;
+      function submit(){
+        var fname, lname, mail, password, about;
+        fname = document.getElementById("fname").value;
+        lname = document.getElementById("lname").value;
+        mail = document.getElementById("mail").value;
+        about = document.getElementById("about").value;
+        var at = mail.indexOf("@");
+        var dot = mail.lastIndexOf(".");
+        var space = mail.indexOf(" ");
+        if ((fname.length<2)||(fname.length>30))
+        alert("Fisrt name must contains 2-30 characters")
+        else if ((lname.length<2)||(lname.length>30))
+        alert("Last name must contains 2-30 characters")
+        else if (!((at != -1) && (at != 0) && (dot != -1) && (dot > at + 1) && (dot < mail.length - 1) && (space == -1)))alert("Email Invalid");
+        else
+        alert("Complete!");
+          
+      } 
+      function reset(){
+        document.getElementById("myForm").reset();
+      }
+    </script>
+</body>

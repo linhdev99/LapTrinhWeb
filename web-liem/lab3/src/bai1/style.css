@@ -1,0 +1,75 @@
+h1{
+    margin: unset;
+}
+body{
+    margin-top: unset;
+    margin: auto;
+    width: 750px;
+    background-color: darkgray;
+}
+.header{
+    margin: unset;
+    height: 50px;
+    padding-left: 10px;
+    background-color: rgb(190, 183, 182);
+}
+
+.menu{
+    padding: 10px;
+    background-color: rgb(194, 132, 153);
+}
+.menu ul{
+    margin: auto;
+    padding: unset;
+    text-align: left;
+}
+.menu li{
+    margin: auto;
+    margin-right: 10px;
+    display: inline-block;
+}
+.menu a{
+    margin: auto;
+}
+h2{
+    margin: unset;
+}
+.container{
+    
+    overflow: hidden;
+    width: 100%;
+}
+.column1{
+    float: left;
+    width: 500px;
+    padding: 10px;
+    background-color: rgb(43, 226, 141);
+    position: relative;
+    display: inline;
+    padding-bottom: 500em;
+    margin-bottom: -500em;
+}
+.column1 a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.column2{
+    float: right;
+    width: 210px;
+    padding: 10px;
+    background-color: rgb(130, 130, 207);
+    position: relative;
+    display: inline;
+    padding-bottom: 500em;
+    margin-bottom: -500em;
+}
+.container::after {
+    display: block;
+    content:"";
+    clear:both;
+  }
+  
+.footer{
+    padding: 10px;
+    background-color: rgb(224, 199, 165);
+}

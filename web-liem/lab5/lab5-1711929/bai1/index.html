@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>bai1 -lab5</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tính toán đơn giản bằng Javascript</h1>
+    <p>Điền vào phép tính dưới đây</p>
+    <input id="num1" onchange="myFunction()">
+    <select id="operate" name="operate" onchange="myFunction()">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+        <option value="exp">^</option>
+    </select>
+    <input id="num2" onchange="myFunction()">
+    <p id="kq">Kết quả: </p>
+
+    <script>
+        function myFunction() {
+          var num1,num2,operate, kq;
+          num1 = parseInt(document.getElementById("num1").value);
+          num2 = parseInt(document.getElementById("num2").value);
+          operate = document.getElementById("operate").value;
+          if(num1 === null || num2 === null) kq ="";
+          else{
+              if(operate == "add") kq = num1 + num2;
+              else if(operate == "sub") kq = num1 - num2;
+              else if(operate == "mul") kq = num1 * num2;
+              else if(operate == "div") kq = num1 / num2;
+              else if(operate == "exp") kq = num1 ** num2;
+            }
+            
+          document.getElementById("kq").innerHTML = "Kết quả: " + kq  ;
+        }
+        </script>
+</body>

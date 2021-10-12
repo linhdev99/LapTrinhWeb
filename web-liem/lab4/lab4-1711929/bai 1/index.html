@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>bai1 -lab4</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Site Title</a>
+        <a href="#news">Categories</a>
+        <a href="#contact">Contact us</a>
+        <a href="#about">Follow us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3 menu">
+            <p>Category</p>
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+            <p>Top Product</p>
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </div>
+    
+        <div class="col-6 col-s-9">
+            <h1>Top product</h1>
+            <div class="row">
+                <div class="cards" >
+                    <img src="default-placeholder.png" alt="" style="width: 100%;">
+                    <h3>Price 1</h3>
+                    <button>Buy now</button>
+
+                </div>
+                <div class="cards">
+                    <img src="default-placeholder.png" alt="" style="width: 100%;">
+                    <h3>Price 2</h3>
+                    <button>Buy now</button>
+
+                </div>
+                <div class="cards" >
+                    <img src="default-placeholder.png" alt="" style="width: 100%;">
+                    <h3>Price 3</h3>
+                    <button>Buy now</button>
+
+                </div>
+                <div class="cards" >
+                    <img src="default-placeholder.png" alt="" style="width: 100%;">
+                    <h3>Price 4</h3>
+                    <button>Buy now</button>
+
+                </div>
+                <div class="cards" >
+                    <img src="default-placeholder.png" alt="" style="width: 100%;">
+                    <h3>Price 5</h3>
+                    <button>Buy now</button>
+
+                </div>
+            </div>
+            <div class="page">
+                <a href="" class="pre">pre</a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="" class="next">next</a>
+
+            </div>
+          </div>
+      
+        <div class="col-3 col-s-12">
+          <div class="aside">                    
+              <img src="default-placeholder.png" alt="" style="width: 100%;">
+              <img src="default-placeholder.png" alt="" style="width: 100%;">
+
+          </div>
+        </div>
+      </div>
+      
+<div class="footer">
+  <p>Footer infomation</p>
+  <a href="#link1">link1</a>|
+  <a href="#link2">link2</a>|
+  <a href="#link3">link3</a>
+</div>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+</body>
+</html>

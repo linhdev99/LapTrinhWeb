@@ -1,0 +1,84 @@
+h1{
+    margin: unset;
+}
+body{
+    margin-top: unset;
+    margin: auto;
+    width: 800px;
+    background-color: darkgray;
+}
+.header{
+    margin: unset;
+    height: 50px;
+    padding-left: 10px;
+    background-color: rgb(116, 109, 108);
+}
+
+.menu{
+    height: 30px;
+    padding: 10px;
+    background-color: rgb(61, 50, 212);
+}
+.menu ul{
+    font-size: 18px;
+    padding: 5px 5px 5px 40px;
+    margin: unset;
+    text-align: left;
+}
+.menu li{
+    margin: auto;
+    margin-right: 10px;
+    display: inline-block;
+}
+.menu a{
+    margin: auto;
+    color: white;
+}
+.column1{
+    width: 250px;
+    float: left;
+}
+a{
+    color: blue;
+}
+ul{
+    margin: unset;
+}
+.row1{
+    height: 150px;
+    background-color: yellow;
+}
+.row2{
+    height: 150px;
+    background-color: gray;
+}
+.column2{
+    width: 550px;
+    float: left;
+    background-color:white;
+}
+.column2 p{
+    padding: 10px;
+}
+.col1{
+    height: 128px;
+    width: 50%;
+    float: left;
+    background-color: green;
+}   
+.col2{
+    height: 128px;
+    width: 50%;
+    background-color: red;
+    float: left;
+}
+.content::after{
+    display: block;
+    clear: both;
+    content: "";
+}
+footer{
+    height: 50px;
+    background-color: blue;
+    text-align: center;
+}
