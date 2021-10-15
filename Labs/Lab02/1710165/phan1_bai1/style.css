@@ -11,9 +11,10 @@
   height: 100%;
   text-align: center;
 }
-
+.title-top-products {
+    margin: 10px 0px 0px 30px;
+}
 .card-view-cell {
-  /* width: 13rem;*/
   margin: 10px;
 }
 .card-view-cell img {
@@ -37,7 +38,6 @@
   color: white;
   text-align: center;
 }
-
 @media (max-width: 960px) {
   .right-product {
     display: none;
