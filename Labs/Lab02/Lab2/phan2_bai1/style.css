@@ -1,0 +1,15 @@
+.body {
+  font-family: 'Courier New', Courier, monospace;
+}
+.head-content {
+  padding: 15px;
+}
+.form-cal {
+  width: 400px;
+  margin: auto;
+}
+.state-check-err {
+  color: red;
+  font-size: 12pt;
+  font-style: italic;
+}
