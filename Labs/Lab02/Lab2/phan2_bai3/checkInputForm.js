@@ -1,3 +1,4 @@
+var countError = 0;
 function onCheckFirstName() {
   var inputbox = document.getElementById("input_firstname");
   var inputstate = document.getElementById("text_check_input_firtname");
@@ -5,16 +6,19 @@ function onCheckFirstName() {
   if (value.length < 2) {
     inputstate.innerText = "* Chưa nhập tên";
     inputstate.style.color = "red";
+    countError++;
     return;
   }
   if (value.length > 30) {
     inputstate.innerText = "* Tên quá dài";
     inputstate.style.color = "red";
+    countError++;
     return;
   }
   if (!isNaN(value)) {
     inputstate.innerText = "* Tên không phải là số";
     inputstate.style.color = "red";
+    countError++;
     return;
   }
   inputstate.innerText = "* Complete";
@@ -27,16 +31,19 @@ function onCheckLastName() {
   if (value.length < 2) {
     inputstate.innerText = "* Chưa nhập tên";
     inputstate.style.color = "red";
+    countError++;
     return;
   }
   if (value.length > 30) {
     inputstate.innerText = "* Tên quá dài";
     inputstate.style.color = "red";
+    countError++;
     return;
   }
   if (!isNaN(value)) {
     inputstate.innerText = "* Tên không phải là số";
     inputstate.style.color = "red";
+    countError++;
     return;
   }
   inputstate.innerText = "* Complete";
@@ -50,6 +57,7 @@ function onCheckEmail() {
   if (!EMAIL.test(value)) {
     inputstate.innerText = "* Email không đúng";
     inputstate.style.color = "red";
+    countError++;
     return;
   }
   inputstate.innerText = "* Complete";
@@ -62,11 +70,13 @@ function onCheckPassword() {
   if (value.length < 2) {
     inputstate.innerText = "* Chưa nhập mật khẩu";
     inputstate.style.color = "red";
+    countError++;
     return;
   }
   if (value.length > 30) {
     inputstate.innerText = "* Mật khẩu quá dài";
     inputstate.style.color = "red";
+    countError++;
     return;
   }
   inputstate.innerText = "* Complete";
@@ -79,8 +89,26 @@ function onCheckAbout() {
   if (value.length > 10000) {
     inputstate.innerText = "* About quá dài";
     inputstate.style.color = "red";
+    countError++;
     return;
   }
   inputstate.innerText = "";
   inputstate.style.color = "green";
+}
+function onClickReset() {
+  location.reload();
+}
+function onClickSubmit() {
+  countError = 0;
+  onCheckFirstName();
+  onCheckLastName();
+  onCheckEmail();
+  onCheckPassword();
+  onCheckAbout();
+  if (countError > 0) {
+    alert("Dữ liệu nhập không đúng định dạng!");
+  }
+  else {
+    alert("Complete!");
+  }
 }
