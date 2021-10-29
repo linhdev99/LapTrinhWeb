@@ -1,5 +1,6 @@
 {
     "editor.wordWrapColumn": 120,
     "prettier.printWidth": 120,
-    "prettier.tabWidth": 2
+    "prettier.tabWidth": 2,
+    "liveServer.settings.port": 5501
 }
