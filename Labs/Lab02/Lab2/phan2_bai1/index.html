@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="settingTable.js" type="text/javascript"></script>
+    <script src="settingTable.js"></script>
   </head>
   <body>
     <div class="head-content">
@@ -51,7 +51,11 @@
                 <label for="input_index_value" class="form-label">
                   Index of Table
                 </label>
-                <input class="form-control" id="input_index_value" autocomplete="off"/>
+                <input
+                  class="form-control"
+                  id="input_index_value"
+                  autocomplete="off"
+                />
               </div>
               <div class="row">
                 <div class="col-6">
@@ -69,7 +73,7 @@
                 <div class="col-6">
                   <div class="d-grid gap-2">
                     <button
-                      id="btn-del-row"
+                      id="btn-del-col"
                       type="button"
                       class="btn btn-outline-primary"
                       onclick="onClickDeleteCol()"
@@ -80,7 +84,7 @@
                 </div>
               </div>
               <button
-                id="btn-del-row"
+                id="btn-del-all"
                 type="button"
                 class="btn btn-outline-danger"
                 onclick="onClickDeleteAll()"
@@ -89,7 +93,7 @@
               </button>
             </div>
             <!-- Script  -->
-            <script src="settingTable.js" type="text/javascript"></script>
+            <script src="settingTable.js"></script>
           </form>
         </div>
         <div class="col-12 col-md-12 col-lg-6 col-xl-8 body-right">
