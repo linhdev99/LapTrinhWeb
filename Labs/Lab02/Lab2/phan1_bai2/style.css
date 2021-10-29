@@ -1,0 +1,97 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.menu-fragment h4 {
+  background-color: #313538;
+  color: white;
+  border: 1px solid #313538;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.title-top-products {
+  margin: 10px 0px 0px 30px;
+}
+.ads-right {
+  width: 160px;
+  height: 600px;
+  background-color: #313538;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 960px) {
+  .right-product {
+    display: none;
+  }
+}
+footer {
+  background-color: #212529;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer-inf {
+  text-align: center;
+}
+.footer-link {
+  text-align: center;
+}
+.footer-link a {
+  margin: 1px;
+}
+.button-next-page {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.head-content {
+  float: left;
+}
+.head-content a {
+  float: left;
+  padding-left: 10px;
+}
+.head-content p {
+  float: left;
+  padding-left: 10px;
+}
+.head-clear {
+  clear: both;
+}
+#main-img {
+  width: 100%;
+  height: auto;
+  padding: 0 0 5% 0;
+}
+#sub-img {
+  width: 95%;
+  height: auto;
+}
+.right-content {
+  padding-top: 0;
+}
+.right-content h5 {
+  font-weight: bold;
+}
+.right-content p {
+  line-height: 35pt;
+}
+.right-content div {
+  text-align: center;
+}
+.description {
+  padding: 5% 0 5% 0;
+}
+.description h5 {
+  font-weight: bold;
+}
+.description p {
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+}
