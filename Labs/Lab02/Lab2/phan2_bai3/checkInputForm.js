@@ -107,8 +107,7 @@ function onClickSubmit() {
   onCheckAbout();
   if (countError > 0) {
     alert("Dữ liệu nhập không đúng định dạng!");
-  }
-  else {
+  } else {
     alert("Complete!");
   }
 }
