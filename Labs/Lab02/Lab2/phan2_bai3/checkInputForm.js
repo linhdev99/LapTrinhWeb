@@ -15,12 +15,6 @@ function onCheckFirstName() {
     countError++;
     return;
   }
-  if (!isNaN(value)) {
-    inputstate.innerText = "* Tên không phải là số";
-    inputstate.style.color = "red";
-    countError++;
-    return;
-  }
   inputstate.innerText = "* Complete";
   inputstate.style.color = "green";
 }
@@ -36,12 +30,6 @@ function onCheckLastName() {
   }
   if (value.length > 30) {
     inputstate.innerText = "* Tên quá dài";
-    inputstate.style.color = "red";
-    countError++;
-    return;
-  }
-  if (!isNaN(value)) {
-    inputstate.innerText = "* Tên không phải là số";
     inputstate.style.color = "red";
     countError++;
     return;
