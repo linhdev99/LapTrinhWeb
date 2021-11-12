@@ -4,7 +4,6 @@
 <head>
   <title>1710165 - Huynh Pham Phuoc Linh</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -13,130 +12,34 @@
 
 <body>
   <div class="container">
-    <?php
-    $data = [];
-    $conn = null;
-    $getErr = "";
-    require 'database.php';
-
-    function selectData($id)
-    {
-      global $conn;
-      global $data;
-      if (empty($id)) {
-        $sql = "SELECT * FROM cars";
-      } else {
-        $sql = "SELECT * FROM cars WHERE id = $id";
-      }
-      $result = $conn->query($sql);
-
-      if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-          $temp = [
-            $row["id"],
-            $row["name"],
-            $row["year"]
-          ];
-          array_push($data, $temp);
-        }
-      }
-    }
-    selectData(null);
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      if ($_POST["btn-action"] == "insert") {
-        $getID = $_POST['input_id'];
-        $getName = $_POST['input_name'];
-        $getYear = $_POST['input_year'];
-        insertData($getID, $getName, $getYear);
-      } else if ($_POST["btn-action"] == "update") {
-        $getID = $_POST['input_id'];
-        $getName = $_POST['input_name'];
-        $getYear = $_POST['input_year'];
-        updateData($getID, $getName, $getYear);
-      } else if ($_POST["btn-action"] == "delete") {
-        $getID = $_POST['input_id'];
-        deleteData('id', $getID);
-      }
-    }
-    function insertData($id, $name, $year)
-    {
-      global $getErr;
-      if ($id == "") {
-        $getErr = "Error!";
-        return;
-      }
-      if (!is_numeric($id) || !is_numeric($year)) {
-        $getErr = "Error!";
-        return;
-      }
-      if (strlen($name) < 5 || strlen($name) > 40) {
-        $getErr = "Error!";
-        return;
-      }
-      if ((int) $year < 1990 || (int) $year > 2015) {
-        $getErr = "Error!";
-        return;
-      }
-      global $conn;
-      $sql = "INSERT INTO cars (id, name, year) VALUES ($id, '$name', '$year')";
-      if ($conn->query($sql) === TRUE) {
-        $getErr = "";
-        header("Refresh:0");
-      } else {
-        $getErr = "Error!";
-      }
-    }
-    function updateData($id, $name, $year)
-    {
-      global $getErr;
-      if ($id == "") {
-        $getErr = "Error!";
-        return;
-      }
-      if (!is_numeric($id) || !is_numeric($year)) {
-        $getErr = "Error!";
-        return;
-      }
-      if (strlen($name) < 5 || strlen($name) > 40) {
-        $getErr = "Error!";
-        return;
-      }
-      if ((int) $year < 1990 || (int) $year > 2015) {
-        $getErr = "Error!";
-        return;
-      }
-      global $conn;
-      $sql = "UPDATE cars SET name='$name', year='$year' WHERE id=$id";
-      if ($conn->query($sql) === TRUE) {
-        $getErr = "";
-        header("Refresh:0");
-      } else {
-        $getErr = "Error!";
-      }
-    }
-    function deleteData($key, $id)
-    {
-      global $getErr;
-      if ($id == "") {
-        $getErr = "Error!";
-        return;
-      }
-      if (!is_numeric($id)) {
-        $getErr = "Error!";
-        return;
-      }
-      global $conn;
-      $sql = "DELETE FROM cars WHERE $key=$id";
-      if ($conn->query($sql) === TRUE) {
-        $getErr = "";
-        header("Refresh:0");
-      } else {
-        $getErr = "Error!";
-      }
-    }
-
-    ?>
     <script>
+      window.onload = load_ajax;
+
+      function load_ajax() {
+        $(document).ready(function() {
+          $.ajax({
+            type: "GET",
+            url: "database.php",
+            data: "btn-action=reload",
+            dataType: 'json',
+            cache: false,
+            success: function(result) {
+              dataTable = result;
+              var table = document.getElementById("my_table");
+              for (var i = 0; i < dataTable.length; i++) {
+                var them_row = table.insertRow(-1);
+                for (var j = 0; j < dataTable[i].length; j++) {
+                  var cell = them_row.insertCell(-1);
+                  cell.innerHTML = dataTable[i][j];
+                  them_row.appendChild(cell);
+                }
+              }
+            }
+          });
+          event.preventDefault();
+        });
+      }
+
       function InsertData() {
         $(document).ready(function() {
           $("#my_form").submit(function(event) {
@@ -148,7 +51,7 @@
             console.log(formData);
             $.ajax({
               type: "POST",
-              url: "index.php",
+              url: "database.php",
               data: $('#my_form').serialize() + "&btn-action=insert",
               dataType: 'html',
               success: function() {
@@ -173,7 +76,7 @@
             console.log(formData);
             $.ajax({
               type: "POST",
-              url: "index.php",
+              url: "database.php",
               data: $('#my_form').serialize() + "&btn-action=update",
               dataType: 'html',
               success: function() {
@@ -198,7 +101,7 @@
             console.log(formData);
             $.ajax({
               type: "POST",
-              url: "index.php",
+              url: "database.php",
               data: $('#my_form').serialize() + "&btn-action=delete",
               dataType: 'html',
               success: function() {
@@ -214,7 +117,7 @@
     </script>
     <h1>Database</h1>
     <hr />
-    <table class="table">
+    <table class="table" id='my_table'>
       <thead>
         <tr>
           <th scope="col">ID</th>
@@ -223,15 +126,7 @@
         </tr>
       </thead>
       <tbody>
-        <?php
-        for ($i = 0; $i < count($data); $i++) {
-          echo '<tr>
-                  <th scope="row">' . $data[$i][0] . '</th>
-                  <td>' . $data[$i][1] . '</td>
-                  <td>' . $data[$i][2] . '</td>
-                </tr>';
-        }
-        ?>
+        <tr></tr>
       </tbody>
     </table>
     <form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post" class="form-cal" id="my_form">
@@ -247,7 +142,6 @@
         <label class="form-label">Year</label>
         <input class="form-control" id="input_year" type="text" name="input_year" />
       </div>
-      <p><?php echo $getErr; ?></p>
       <hr />
       <div class="row">
         <div class="col-4">
