@@ -1,5 +1,6 @@
 var inName;
 var inValue;
+var inExpire;
 var dataTable = [];
 function SetTable() {
     if (inName == null) Khaibao();
@@ -36,7 +37,16 @@ function SetNewCookie() {
     if (inName == null) Khaibao();
     strName = inName.value;
     strValue = inValue.value;
-    document.cookie = strName + "=" + strValue;
+    strDay = parseInt(inExpire.value);
+    var exdays = 1;
+    if (strDay != "") {
+        exdays = strDay;
+    }
+    var expires = new Date(Date.now() + exdays * 1000 * 60 * 60 * 24).toGMTString();
+    var query = strName + "=" + strValue + '; expires="' + expires + '"';
+    console.log(query);
+    document.cookie = strName + "=" + strValue + '; expires="' + expires + '"';
+    alert("Cookie name complete: " + strName);
     location.reload();
 }
 function DeleteCookie() {
@@ -48,6 +58,7 @@ function DeleteCookie() {
 function Khaibao() {
     inName = document.getElementById("cookie_name");
     inValue = document.getElementById("cookie_value");
+    inExpire = document.getElementById("cookie_expire");
     SetTable();
 }
 window.onload = Khaibao;
